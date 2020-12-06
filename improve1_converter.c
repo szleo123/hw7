@@ -8,17 +8,11 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 {
   for (unsigned i = 0; i < nlines; i++) {
     char* cur = lines[i];
-    // find the size of the quote
-    char* cursize = cur;
-    size_t size = 0;
-    while(*cursize++) ++size;
+    uint16_t result = 0; // make size of result smaller and g
 
-    uint32_t result = 0; 
-    int timer = 1;
-    for (int i = size-1; i >=0; --i){
-    	int dec = cur[i] - '0';
-    	result += (timer * dec);
-    	timer *= 10; 
+    while(*cur != '\0'){
+    	result = result * 10 + *cur - '0'; 
+        ++cur; 
     }
     nums[i] = result;
   }
