@@ -27,6 +27,12 @@ Measure the performance of your implementation, describe it in the README, and e
 
 For comparison, my version of the naive algorithm runs in about 0.01s on gyoza/gcc-4.8, and much faster using a more modern compiler and architecture. If your version isn't significantly faster than `atoi`, you're doing something wrong.
 
+**Writeup for Part1**
+
+Running in WSL, with the given converter in (`standard_converter.c`) which uses the standard library `atoi()` function, the best performance is 0.031s. Use my own version implemented in (`naive_converter.c`), the best performance is 0.01s. 
+
+The performance difference is obvious since standard (`atoi`) function checks a lot of extra stuff where the naive version doesn't do. For example, (`atoi`) function checks the whitespace of given array, the sign of the char array, and if all characters are digits, while the navie version doesn't have such overhead. 
+
 ### Part 2: Optimized implementation (80 pts)
 
 Your assignment is to apply any optimization you can think of to the `convert_all()` function and get the best run time possible for this benchmark. A solution that shaves 30% of the naive run time (for example, going from 0.06s to 0.042s) will get the full 80 points. Anything beyond that is extra credit.
