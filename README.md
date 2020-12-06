@@ -43,4 +43,10 @@ I will compile and compare all of your implementations on my Linux host with gcc
 This is an individual assignment --- no pairs this time. Also, please do **not** look up solutions online, just answers to compiler or optimization questions.
 Post a link to your github repo with your code and a README.md describing your changes (I'd like to also read about what you tried and didn't work).
 
+**Writeup for Part2**
+
+In my first try, I notices the overhead of finding the size of each quote before actually iterate through the array. So I deletes the size finding part, and implements a version that the loop doesn't depend on the size of the array. This greatly boosts the performance to 0.006s. 
+
+In the second try, I notices the fact that all the size of the quotes ranges from 3 to 5, so I precalculate the first 3 digits to the result and reduce the length of the loop. This boosts the performance to 0.005s. 
+
 *Good luck!*
