@@ -31,7 +31,7 @@ For comparison, my version of the naive algorithm runs in about 0.01s on gyoza/g
 
 Running in WSL, with the given converter in (`standard_converter.c`) which uses the standard library `atoi()` function, the best performance is 0.031s. Use my own version implemented in (`naive_converter.c`), the best performance is 0.01s. 
 
-The performance difference is obvious since standard (`atoi`) function checks a lot of extra stuff where the naive version doesn't do. For example, (`atoi`) function checks the whitespace of given array, the sign of the char array, and if all characters are digits, while the navie version doesn't have such overhead. 
+The performance difference is obvious since standard `atoi` function checks a lot of extra stuff where the naive version doesn't do. For example, `atoi` function checks the whitespace of given array, the sign of the char array, and if all characters are digits, while the navie version doesn't have such overhead. 
 
 ### Part 2: Optimized implementation (80 pts)
 
