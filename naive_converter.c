@@ -3,7 +3,6 @@
  */
 #include "converter.h"
 
-
 void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 {
   for (unsigned i = 0; i < nlines; i++) {
