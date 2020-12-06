@@ -1,11 +1,8 @@
 /*
- * Trivial implementation of converter function.
- * You may override this file or create your own.
+ * Naive version converter 
  */
 #include "converter.h"
 
-#include <stdlib.h>
-#include <stdio.h>
 
 void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 {
@@ -13,7 +10,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
     char* cur = lines[i];
     // find the size of the quote
     char* cursize = cur;
-    size_t size = 0;
+    int size = 0;
     while(*cursize++) ++size;
 
     uint32_t result = 0; 
